@@ -1,7 +1,7 @@
-FROM python:3.9 -slim
-WROKDIR /APP
+FROM python:3.11 -slim
+WORKDIR /app
 COPY requiremetns.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMP ["python', "app.py"]
+CMD ["python', "app.py"]
 
